@@ -30,13 +30,7 @@ inputs:
     description: List of tags as key-value pair attributes"
     required: false
     default: |
-      type=schedule
-      type=semver,pattern={{version}}
-      type=semver,pattern={{major}}.{{minor}}
-      type=semver,pattern={{major}}
-      type=ref,event=branch
-      type=ref,event=pr
-      type=sha
+       type=sha
 
   tags:
     description: "List of tags"
