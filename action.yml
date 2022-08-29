@@ -15,7 +15,7 @@ inputs:
 
   images:
     description: Docker images to use as base name for tags
-    required: true
+    required: false
 
   file:
     description: "Path to the Dockerfile"
