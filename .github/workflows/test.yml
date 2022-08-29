@@ -20,3 +20,4 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
           image: js-task
           tags-meta: latest
+          tags: latest
