@@ -66,7 +66,7 @@ runs:
      uses: docker/metadata-action@v4
      with:
        images: ${{ steps.login-ecr.outputs.registry }}/${{ inputs.images }}
-       tags: ${{ inputs.tags-meta }}
+       tags: ${{ inputs.default.tags-meta }} || ${{ inputs.tags-meta }}
 
    - name: Docker build and push
      uses: docker/build-push-action@v3
