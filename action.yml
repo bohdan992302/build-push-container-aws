@@ -16,7 +16,6 @@ inputs:
   images:
     description: Docker images to use as base name for tags
     required: true
-    default: ${{ runs.steps.login-ecr.outputs.registry }}/${{ GITHUB_REPOSITORY }}
 
   file:
     description: "Path to the Dockerfile"
@@ -42,12 +41,10 @@ inputs:
   tags:
     description: "List of tags"
     required: false
-    default: ${{ runs.steps.meta.outputs.tags }}
 
   labels:
     description: "labels"
     required: false
-    default: ${{ runs.steps.meta.outputs.labels }}
 
 
 runs:
