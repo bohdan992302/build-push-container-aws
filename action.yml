@@ -65,7 +65,7 @@ runs:
      id: meta
      uses: docker/metadata-action@v4
      with:
-       images: ${{ inputs.images }} || ${{ steps.login-ecr.outputs.registry }}/${{ GITHUB_REPOSITORY }}
+       images: ${{ steps.login-ecr.outputs.registry }}/${{ inputs.images }}
        tags: ${{ inputs.tags-meta }}
 
    - name: Docker build and push
